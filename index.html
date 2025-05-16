@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Anniversary My Love ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff3f3);
+      overflow-x: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #b30059;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      color: #4d0039;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .gallery img {
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .controls {
+      margin-top: 30px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      background-color: #b30059;
+      color: white;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #800040;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy 2nd Anniversary ❤️</h1>
+    <p>
+      Every moment with you has been a beautiful chapter in our story. On this special night,
+      I want to remind you just how much you mean to me. From laughter to late-night talks,
+      you've made life more magical. Here's to forever with you.
+    </p>
+
+    <div class="gallery">
+      <img src="8A765568-A37D-4522-900B-E551B005A326.jpeg" alt="Pic 1">
+      <img src="374B0782-96A5-4659-A8CF-0EBCB75DE6B4.jpeg" alt="Pic 2">
+      <img src="768EF769-B049-4F90-96D3-E76BF476401D.jpeg" alt="Pic 3">
+      <img src="5F2174F0-6D55-43E5-89A4-AC32BC1DEC4C.jpeg" alt="Pic 4">
+      <img src="EE61DF0D-EF5D-44FE-9316-1AF7C1884FBF.jpeg" alt="Pic 5">
+      <img src="B67FB6FA-54CD-46D3-89BC-0127C9F7B096.jpeg" alt="Pic 6">
+      <img src="9EEF5601-AE00-4642-A3F8-CDD8FA259BD3.jpeg" alt="Pic 7">
+    </div>
+
+    <div class="controls">
+      <button class="btn" onclick="toggleMusic()">Pause / Play Music</button>
+    </div>
+  </div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="mary-on-a-cross.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+    <!--
+    const now = new Date();
+    const openTime = new Date("2025-05-17T00:00:00").getTime();
+    if (now.getTime() < openTime) {
+      document.body.innerHTML = '<div class="container"><h1>Something beautiful is coming... 💖</h1><p>This page will open automatically at midnight 🕛</p></div>';
+      setTimeout(() => {
+        location.reload();
+      }, openTime - now.getTime());-->
+    }
+  </script>
+</body>
+</html>
