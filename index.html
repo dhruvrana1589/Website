@@ -37,6 +37,13 @@
     <h1 class="text-4xl font-bold mb-4 text-pink-600">Hold on, something magical is coming 💫</h1>
     <p class="text-xl text-gray-600">This page unlocks at midnight on May 17, 2025</p>
   </div>
+  <div id="music-play-overlay" class="fixed inset-0 bg-white flex flex-col items-center justify-center z-50">
+  <h2 class="text-2xl mb-4">Click to play our anniversary song 🎵</h2>
+  <button id="play-music-btn" class="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700">
+    Play Music
+  </button>
+</div>
+
 
   <div id="main-content" class="hidden fade-in">
     <!-- Hero Section -->
@@ -102,10 +109,11 @@
     </section>
   </div>
 
-  <audio autoplay loop>
-    <source src="/mary-on-a-cross.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+<audio id="anniversary-audio" loop>
+  <source src="/mary-on-a-cross.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
   
   <script>
   
@@ -122,5 +130,15 @@
     };
     checkTime();
   </script>
+  <script>
+  const audio = document.getElementById('anniversary-audio');
+  const playOverlay = document.getElementById('music-play-overlay');
+  const playBtn = document.getElementById('play-music-btn');
+
+  playBtn.addEventListener('click', () => {
+  audio.play();
+  playOverlay.style.display = 'none';
+   });
+</script> 
 </body>
 </html>
